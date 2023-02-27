@@ -1,0 +1,41 @@
+﻿@model Register
+
+<h2>회원가입</h2>
+<form asp-controller="Security" asp-action="Register" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <table>
+        <tr>
+            <td class="right"><label asp-for="UserName">이름</label> :</td>
+            <td class="left"><input type="text" asp-for="UserName" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="Password">비밀번호</label> :</td>
+            <td class="left"><input type="password" asp-for="Password" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="ConfirmPassword">비밀번호 확인</label> :</td>
+            <td class="left"><input type="password" asp-for="ConfirmPassword" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="Email">이메일</label> :</td>
+            <td class="left"><input type="text" asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="FullName">전체 이름</label> :</td>
+            <td><input type="text" asp-for="FullName" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="BirthDate">생년월일</label> :</td>
+            <td class="left"><input type="date" asp-for="BirthDate" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">회원가입하기</button>
+            </td>
+        </tr>
+    </table>
+
+    <a asp-controller="Security" asp-action="SignIn">[로그인페이지로 이동하기]</a>
+
+</form>

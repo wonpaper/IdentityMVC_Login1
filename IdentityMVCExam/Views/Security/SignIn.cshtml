@@ -1,0 +1,30 @@
+﻿@model SignIn
+
+<h2>로그인</h2>
+<form asp-controller="Security" asp-action="SignIn" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <table>
+        <tr>
+            <td class="right"><label asp-for="UserName">이름</label> :</td>
+            <td class="left"><input type="text" asp-for="UserName" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="Password">비밀번호</label> :</td>
+            <td class="left"><input type="password" asp-for="Password" /></td>
+        </tr>
+        <tr>
+            <td class="right"><label asp-for="RememberMe">사용자저장</label> :</td>
+            <td class="left"><input type="checkbox" asp-for="RememberMe" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">로그인</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <a asp-controller="security" asp-action="register">[회원가입]</a>
+
+</form>
